@@ -1,0 +1,21 @@
+# Dependencies
+node_modules/
+
+# Production and test output
+dist/
+coverage/
+
+# Local environment files
+.env
+.env.*
+!.env.example
+
+# Tool caches and logs
+*.log
+.eslintcache
+
+# Editors and operating systems
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
