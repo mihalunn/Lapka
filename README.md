@@ -4,7 +4,9 @@
 
 ## Текущий статус
 
-Создан базовый каркас приложения на React, TypeScript и Vite. Требования и этапы разработки описаны в продуктовой документации.
+Создан каркас приложения на React, TypeScript и Vite. Завершены Фаза 0
+(инструменты проверки) и Фаза 1 (контекст, ADR и файловая память) миграции на
+agent-ready процесс.
 
 ## Запуск проекта
 
@@ -28,15 +30,20 @@ npm run dev
 npm run dev -- --host 127.0.0.1
 ```
 
-Проверить код:
+Запустить все обязательные проверки:
 
 ```bash
-npm run lint
+npm run check
 ```
 
-Создать production-сборку:
+Отдельные проверки:
 
 ```bash
+npm run format
+npm run lint
+npm run stylelint
+npm run typecheck
+npm run test
 npm run build
 ```
 
@@ -49,6 +56,15 @@ npm run build
 5. [Техническая концепция](docs/product/05-architecture.md)
 6. [Учебный backlog](docs/product/06-backlog.md)
 
+## AI-процесс
+
+- [Точка входа для агентов](AGENTS.md)
+- [Процесс миграции](MIGRATION.md)
+- [Краткий AI-контекст](docs/ai-context/)
+- [Архитектурные решения](docs/adr/)
+- [Текущая задача](docs/state/current-task.md)
+- [Прогресс](docs/state/progress.md)
+
 ## Дизайн-подход
 
 Источником истины служат UX/UI-спецификация, CSS-токены, адаптивные правила и служебная страница `/ui-kit`.
@@ -57,4 +73,5 @@ npm run build
 
 ## Следующий шаг
 
-Настроить инструменты контроля качества по задаче T-002 из backlog.
+Фаза 2 процесса миграции: добавить версионируемые промпты и утвердить spec для
+T-003.
