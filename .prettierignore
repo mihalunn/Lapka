@@ -1,0 +1,6 @@
+coverage
+dist
+node_modules
+docs/product
+package-lock.json
+public/*.svg
