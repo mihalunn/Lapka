@@ -11,29 +11,31 @@ Lapka — семейное веб-приложение для хранения �
 ## Где что лежит
 
 - Продукт и границы: `docs/product/01-product-brief.md`,
-  `docs/product/02-mvp-scope.md`.
+  `docs/product/02-mvp-scope.md`, кратко — `docs/ai-context/product.md`.
 - Сценарии и домен: `docs/product/03-analysis.md`.
 - UX/UI-контракт и токены: `docs/product/04-design-spec.md`.
-- Архитектура: `docs/product/05-architecture.md`.
+- Архитектура: `docs/product/05-architecture.md`, кратко —
+  `docs/ai-context/architecture.md`.
 - Задачи и DoD: `docs/product/06-backlog.md`.
+- Конвенции: `docs/ai-context/conventions.md`.
+- Принятые решения: `docs/adr/`.
+- Активная задача: `docs/state/current-task.md`.
+- Память процесса: `docs/state/progress.md`.
 - Процесс миграции: `MIGRATION.md`.
 
-Следующие пути появятся на следующих фазах миграции:
+Следующие пути появятся на Фазе 2 миграции:
 
-- контекст: `docs/ai-context/`;
-- решения: `docs/adr/`;
-- активная задача: `docs/state/current-task.md`;
-- память процесса: `docs/state/progress.md`;
 - спецификации: `docs/specs/T-XXX.md`;
 - промпты: `docs/prompts/`.
 
 ## Как брать задачу
 
-1. Прочитать `MIGRATION.md` и определить текущую фазу.
-2. Если существуют `docs/state/current-task.md` и spec задачи, прочитать их.
-3. Читать только документы, на которые ссылается spec. Не сканировать весь
+1. Прочитать `docs/state/current-task.md`.
+2. Прочитать `MIGRATION.md` и определить текущую фазу.
+3. Если существует spec активной задачи, прочитать её.
+4. Читать только документы, на которые ссылается spec. Не сканировать весь
    репозиторий без необходимости.
-4. До появления spec-файлов брать задачи только по прямому указанию владельца из
+5. До появления spec-файлов брать задачи только по прямому указанию владельца из
    `docs/product/06-backlog.md`.
 
 ## Пайплайн витка
@@ -41,8 +43,8 @@ Lapka — семейное веб-приложение для хранения �
 Утверждённая spec → тесты RED → минимальная реализация GREEN →
 `npm run check` → запись в `progress.md` → ревью владельца.
 
-Пока соответствующая фаза миграции не создала spec или state-файлы, следовать
-контрольным точкам `MIGRATION.md` и не имитировать отсутствующие артефакты.
+До появления spec-файлов следовать `docs/state/current-task.md` и контрольным
+точкам `MIGRATION.md`, не имитируя отсутствующие артефакты.
 
 ## Жёсткие запреты
 
