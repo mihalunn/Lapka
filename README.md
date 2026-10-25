@@ -75,3 +75,5 @@ npm run build
 
 Фаза 2 процесса миграции: добавить версионируемые промпты и утвердить spec для
 T-003.
+
+community-project:ztHozMbrakC81yxR7Z06FSi4
