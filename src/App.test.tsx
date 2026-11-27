@@ -1,7 +1,8 @@
 import { render, screen } from '@testing-library/react'
+import { createMemoryRouter, RouterProvider } from 'react-router'
 import { describe, expect, it } from 'vitest'
 
-import App from './App'
+import { routes } from './app/routes'
 
 const tokenNames = [
   'color-brand-600',
@@ -27,7 +28,11 @@ const tokenNames = [
 
 describe('Служебная страница токенов', () => {
   it('показывает подписи токенов из таблицы', () => {
-    render(<App />)
+    render(
+      <RouterProvider
+        router={createMemoryRouter(routes, { initialEntries: ['/ui-kit'] })}
+      />,
+    )
 
     for (const name of tokenNames) {
       expect(screen.getByText(name)).toBeInTheDocument()
@@ -35,7 +40,11 @@ describe('Служебная страница токенов', () => {
   })
 
   it('показывает демонстрационные подписи без данных семьи', () => {
-    render(<App />)
+    render(
+      <RouterProvider
+        router={createMemoryRouter(routes, { initialEntries: ['/ui-kit'] })}
+      />,
+    )
 
     expect(screen.getByText('Текст')).toBeInTheDocument()
     expect(screen.getByText('Поверхность')).toBeInTheDocument()
